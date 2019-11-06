@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+.current-question{
+    margin-left: auto;
+    margin-right: auto;
+}
+.item .question-choices{
+    align-items: flex-start;
+}
+
+.item .progress{
+    justify-content: flex-start;
+    border: 1px solid black;
+    width: fit-content;
+    display: inline-block;
+    order: 1;
+}
+
+.item .score{
+    border: 1px solid black;
+    width: fit-content;
+    display: inline-block;
+    order: 2;
+}
+
+body{
+    align-items: center;
+    border: 1px solid black;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+}
+
+.item .submit-button{
+    width: fit-content;
+    display: inline-flex;
+    justify-content: flex-end;
+    order: 3;
+}
+
+div .footer{
+    flex-direction: row;
+}
+
+.quiz-box{
+    width: 30%;
+}
