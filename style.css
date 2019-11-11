@@ -1,12 +1,15 @@
-*{
+@media (min-width: 1025px){
+    *{
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
 }
-.current-question{
-    margin-left: auto;
-    margin-right: auto;
-}
-.item .question-choices{
-    align-items: flex-start;
+.current-question, #current{
+    text-align: center;
+    margin: 0px;
+    align-items: center;
 }
 
 .item .progress{
@@ -25,26 +28,352 @@
 }
 
 body{
-    align-items: center;
-    border: 1px solid black;
-}
-
-.item{
     display: flex;
-    flex-direction: column;
-}
-
-.item .submit-button{
-    width: fit-content;
-    display: inline-flex;
-    justify-content: flex-end;
-    order: 3;
-}
-
-div .footer{
-    flex-direction: row;
-}
-
-.quiz-box{
+    border: 1px solid gainsboro;
     width: 30%;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+ .footer{
+    width: fit-content;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.correct-answer{
+    background-color: rgba(78, 155, 78, 0.644);
+}
+
+.incorrect-answer{
+    background-color: rgba(253, 64, 64, 0.52);
+}
+
+.multiple-choice{
+    display: inline-block;
+}
+
+input {
+    -webkit-appearance: none; 
+    appearance: none;
+    height: fit-content;
+  }
+  
+  .title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid gainsboro;
+      border-width: 50%;
+  }
+
+  .stats > div{
+      display: inline-block;
+      align-items: center;
+      width: fit-content;
+      flex-direction: row;
+  }
+
+  label.highlight:hover{
+    background-color: rgba(83, 100, 116, 0.472); 
+  }
+
+.selected{
+    background-color: rgba(83, 100, 116, 0.63); 
+  }
+
+.stats{
+      flex-direction: row;
+      justify-content: space-around;
+  }
+
+button{
+        display: inline-block;
+        border: none;
+        padding: 1rem 2rem;
+        margin: 0;
+        text-decoration: none;
+        background: #75adf1;
+        color: #ffffff;
+        font-family: inherit;
+        font-size: 1rem;
+        cursor: pointer;
+        text-align: center;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+  }
+
+  #start, .restart-button{
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      padding: 1rem 0rem;
+      margin-right: auto;
+      margin-left: auto;
+  }
+
+  .title{
+      margin: 0px;
+  }
+
+  h1{
+      margin: 0px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px){
+    *{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+    }
+    .current-question, #current{
+        text-align: center;
+        margin: 0px;
+        align-items: center;
+    }
+    
+    .item .progress{
+        justify-content: flex-start;
+        border: 1px solid black;
+        width: fit-content;
+        display: inline-block;
+        order: 1;
+    }
+    
+    .item .score{
+        border: 1px solid black;
+        width: fit-content;
+        display: inline-block;
+        order: 2;
+    }
+    
+    body{
+        display: flex;
+        border: 1px solid gainsboro;
+        /*width: 30%;*/
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    
+    
+     .footer{
+        width: fit-content;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .correct-answer{
+        background-color: rgba(78, 155, 78, 0.644);
+    }
+    
+    .incorrect-answer{
+        background-color: rgba(253, 64, 64, 0.52);
+    }
+    
+    .multiple-choice{
+        display: inline-block;
+    }
+    
+    input {
+        -webkit-appearance: none; 
+        appearance: none;
+        height: fit-content;
+      }
+      
+      .title{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-bottom: 1px solid gainsboro;
+          border-width: 50%;
+      }
+    
+      .stats > div{
+          display: inline-block;
+          align-items: center;
+          width: fit-content;
+          flex-direction: row;
+      }
+    
+      label.highlight:hover{
+        background-color: rgba(83, 100, 116, 0.472); 
+      }
+    
+    .selected{
+        background-color: rgba(83, 100, 116, 0.63); 
+      }
+    
+    .stats{
+          flex-direction: row;
+          justify-content: space-around;
+      }
+    
+    button{
+            display: inline-block;
+            border: none;
+            padding: 1rem 2rem;
+            margin: 0;
+            text-decoration: none;
+            background: #75adf1;
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+      }
+    
+      #start, .restart-button{
+          align-items: center;
+          justify-content: center;
+          width: 50%;
+          padding: 1rem 0rem;
+          margin-right: auto;
+          margin-left: auto;
+      }
+    
+      .title{
+          margin: 0px;
+      }
+    
+      h1{
+          margin: 0px;
+      }
+}
+
+@media (max-width: 767px){
+    *{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+    }
+    .current-question, #current{
+        text-align: center;
+        margin: 0px;
+        align-items: center;
+    }
+    
+    .item .progress{
+        justify-content: flex-start;
+        border: 1px solid black;
+        width: fit-content;
+        display: inline-block;
+        order: 1;
+    }
+    
+    .item .score{
+        border: 1px solid black;
+        width: fit-content;
+        display: inline-block;
+        order: 2;
+    }
+    
+    body{
+        justify-content: center;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+    }
+    
+    
+     .footer{
+        width: fit-content;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .correct-answer{
+        background-color: rgba(78, 155, 78, 0.644);
+    }
+    
+    .incorrect-answer{
+        background-color: rgba(253, 64, 64, 0.52);
+    }
+    
+    .multiple-choice{
+        display: inline-block;
+    }
+    
+    input {
+        -webkit-appearance: none; 
+        appearance: none;
+        height: fit-content;
+      }
+      
+      .title{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-bottom: 1px solid gainsboro;
+          border-width: 50%;
+      }
+    
+      .stats > div{
+          display: inline-block;
+          align-items: center;
+          width: fit-content;
+          flex-direction: row;
+      }
+    
+      label.highlight:hover{
+        background-color: rgba(83, 100, 116, 0.472); 
+      }
+    
+    .selected{
+        background-color: rgba(83, 100, 116, 0.63); 
+      }
+    
+    .stats{
+          flex-direction: row;
+          justify-content: space-around;
+      }
+    
+    button{
+            display: inline-block;
+            border: none;
+            padding: 1rem 2rem;
+            margin: 0;
+            text-decoration: none;
+            background: #75adf1;
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+      }
+    
+      #start, .restart-button{
+          align-items: center;
+          justify-content: center;
+          width: 50%;
+          padding: 1rem 0rem;
+          margin-right: auto;
+          margin-left: auto;
+      }
+    
+      .title{
+          margin: 0px;
+      }
+    
+      h1{
+          margin: 0px;
+      }
 }
