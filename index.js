@@ -95,6 +95,7 @@ function quizScreen(){
   <div class="item footer">
   <div class = "item submit-div">
   <button type="submit" class = "submit-button">Submit</button>
+  <div class="warning">Please select an option!</div>
   </div>
   </form>
   </div>`)
@@ -138,7 +139,7 @@ $(".quiz-box").on('click', '.submit-button', function(event) {
   console.log("submit button has been clicked");
   if($('[name=question]:checked').length == 0){
     //insert a div rather than an alert to make more user friendly
-    alert("please select an option");
+    $(".warning").css("visibility", "visible");
     return;
   }
   correct = $("input[name=question]:checked").val();
@@ -170,6 +171,7 @@ function answerResponse(){
 
 function nextQuestion(){
   $(".quiz-box").on('click', '#next-button', function(event){
+    $(".warning").css("visibility", "hidden");
     $('.multiple-choice').empty();
     newQuestion();
     $('#next-button').replaceWith('<button type="submit" class = "submit-button">SUBMIT</button>');
@@ -202,7 +204,6 @@ function selectionHighlight(){
       }
     }
     $(this).toggleClass("selected");
-  //$(this).parent().toggleClass("selected");
   })
 }
   //display end screen

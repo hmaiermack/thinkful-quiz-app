@@ -381,3 +381,7 @@ button{
 title{
     display: none;
 }
+
+.warning{
+    visibility: hidden;
+}
