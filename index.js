@@ -129,7 +129,6 @@ function questionSubmit(){
 $(".quiz-box").on('click', '.submit-button', function(event) {
   event.preventDefault();
   event.stopImmediatePropagation();
-
   for(let i = 0; i < STORE[progress].answers.length; i++){
     if($(`label[for=question${i}]`).hasClass("selected")){
       $(`label[for=question${i}]`).toggleClass("selected");
@@ -164,6 +163,8 @@ function answerResponse(){
       }
     }
   }
+  $(".multiple-choice").children().prop('disabled',true);
+
   $('.submit-button').replaceWith('<button type="submit" id = "next-button">NEXT</button>');
 }
 
